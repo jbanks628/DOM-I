@@ -40,3 +40,86 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// Example: Update the img src for the logo
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["images"]["logo-img"]);
+
+//Updating nav section
+const navSect = document.querySelectorAll('nav a')
+navSect[0].textContent = siteContent['nav']['nav-item-1'];
+navSect[1].textContent = siteContent['nav']['nav-item-2'];
+navSect[2].textContent = siteContent['nav']['nav-item-3'];
+navSect[3].textContent = siteContent['nav']['nav-item-4'];
+navSect[4].textContent = siteContent['nav']['nav-item-5'];
+navSect[5].textContent = siteContent['nav']['nav-item-6'];
+
+const libraryLink = document.createElement('a');
+libraryLink.textContent = 'Library';
+libraryLink.href = 'a';
+document.querySelector('nav').appendChild(libraryLink);
+
+const domLink = document.createElement('a');
+domLink.textContent = 'DOM';
+domLink.href = 'a';
+document.querySelector('nav').prepend(domLink);
+
+const navStyle = document.querySelectorAll('header nav a');
+navStyle.forEach(italic => {
+  italic.style.fontStyle = 'italic'
+});
+
+
+
+//Updating cta section
+const h1Sect = document.querySelector('h1');
+h1Sect.textContent = siteContent['cta']['h1'];
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src',siteContent['images']['cta-img']);
+//Updating main-content
+const features = document.querySelector('.top-content .text-content:nth-of-type(1) h4');
+const featuresContent = document.querySelector('.top-content .text-content:nth-of-type(1) p');
+const about = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
+const aboutContent = document.querySelector('.top-content .text-content:nth-of-type(2) p');
+//main content text
+features.textContent = siteContent['main-content']['features-h4'];
+featuresContent.textContent= siteContent['main-content']['features-content'];
+about.textContent = siteContent['main-content']['about-h4'];
+aboutContent.textContent = siteContent['main-content']['about-content'];
+//main content images
+const midImg = document.querySelector('#middle-img');
+midImg.setAttribute('src',siteContent['images']['accent-img']);
+//Updating bottom content
+const services = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+const servicesContent = document.querySelector('.bottom-content .text-content:nth-of-type(1) p')
+services.textContent = siteContent['main-content']['services-h4']
+servicesContent.textContent = siteContent['main-content']['services-content'];
+
+const product = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+product.textContent = siteContent['main-content']['product-h4'];
+const productContent = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
+productContent.textContent = siteContent['main-content']['product-content'];
+
+const vision = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+vision.textContent = siteContent['main-content']['vision-h4'];
+const visionContent = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+visionContent.textContent = siteContent['main-content']['vision-content'];
+//Contact section
+const contact = document.querySelector('.contact h4');
+contact.textContent = siteContent['contact']['contact-h4'];
+
+const contactAddress = document.querySelector('.contact p:nth-of-type(1)');
+contactAddress.textContent = siteContent['contact']['address'];
+
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)');
+contactPhone.textContent = siteContent['contact']['phone'];
+
+const contactEmail = document.querySelector('.contact p:nth-of-type(3)');
+contactEmail.textContent = siteContent['contact']['email'];
+//footer
+const footer = document.querySelector('footer');
+footer.textContent = siteContent['footer']['copyright'];
+const footerA = document.querySelector('footer a');
+footerA.classList.add('bold');
